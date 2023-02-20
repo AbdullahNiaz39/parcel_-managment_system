@@ -21,6 +21,6 @@ root.render(
         <Redirect from="/" to="/auth/login" />
       </Switch>
     </BrowserRouter>
-    <ToastContainer position="bottom-center" />
+    <ToastContainer />
   </>
 );

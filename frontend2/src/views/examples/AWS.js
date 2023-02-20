@@ -141,14 +141,13 @@ const AWS = (props) => {
           },
         });
         console.log(res.data.message);
-        setSuccess(res.data.message);
         toast.success(res.data.message, { autoClose: 1000 });
       } catch (err) {
         const message =
           (err.response && err.response.data && err.response.data.message) ||
           err.message ||
           err.toString();
-        setError(message);
+
         toast.error(message, { autoClose: 1000 });
       }
 
@@ -204,8 +203,21 @@ const AWS = (props) => {
 
   return (
     <>
-      <Col lg="5" md="7">
-        <Card className="bg-secondary shadow border-0">
+      <Col lg="5" md="7" className="mx-auto">
+        {/* <Card className="bg-secondary shadow border-0"> */}
+        <Card
+          className="bg-secondary shadow border-0"
+          style={{
+            maxWidth: "600px",
+            marginTop: "120px",
+            display: "flex",
+            alignItems: "center",
+            "@media (max-width: 500px)": {
+              marginTop: "80px",
+              height: "auto",
+            },
+          }}
+        >
           <CardBody className="px-lg-5 py-lg-5">
             <Form role="form">
               <FormGroup className="mb-3">

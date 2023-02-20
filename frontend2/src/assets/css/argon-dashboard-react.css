@@ -5035,6 +5035,7 @@ input[type="button"].btn-block {
   .card-deck {
     display: flex;
     flex-flow: row wrap;
+    
     margin-right: -15px;
     margin-left: -15px;
   }
@@ -16221,6 +16222,7 @@ a.btn-icon-only {
 
 .card-stats .card-body {
   padding: 1rem 1.5rem;
+  margin-top: 30px;
 }
 
 .card-stats .card-status-bullet {
